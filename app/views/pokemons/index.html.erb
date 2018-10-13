@@ -1,0 +1,19 @@
+<html>
+<body>
+
+<%= nav_bar brand: "Pokedex", brand_link: ""%>
+
+<div class="container">
+<h1>Kanto</h1>
+</div>
+
+<% @pokemons.each do |pokemon| %>
+  <tr>
+    <td><%= image_tag "/sprites/#{pokemon.poke_id}.png", size:"100x100" %></td>
+    <td><%= pokemon.name %></td>
+    <td><%= pokemon.types %></td>
+  </tr>
+<% end %>
+
+</body>
+</html>
